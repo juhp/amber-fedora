@@ -1,3 +1,5 @@
+%bcond tests 0
+
 Name:           amber
 Version:        0.5.1
 Release:        1%{?dist}
@@ -29,6 +31,12 @@ cargo install --path . --root "%{buildroot}%{_prefix}"
 rm %{buildroot}%{_prefix}/.crates*
 
 %{buildroot}%{_bindir}/amber run docs.ab
+
+
+%check
+%if %{with tests}
+cargo test --release
+%endif
 
 
 %files
