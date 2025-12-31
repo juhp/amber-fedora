@@ -28,10 +28,12 @@ at compile time.
 cargo install --path . --root "%{buildroot}%{_prefix}"
 rm %{buildroot}%{_prefix}/.crates*
 
+%{buildroot}%{_bindir}/amber run docs.ab
+
 
 %files
 %license LICENSE.md
-%doc README.md
+%doc README.md src/std/docs
 %{_bindir}/amber
 
 
