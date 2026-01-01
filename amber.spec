@@ -1,5 +1,9 @@
 %bcond tests 0
 
+%if %{defined rhel}
+%define debug_package %{nil}
+%endif
+
 Name:           amber
 Version:        0.5.1
 Release:        1%{?dist}
