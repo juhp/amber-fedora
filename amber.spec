@@ -12,6 +12,7 @@ Source0:        https://github.com/amber-lang/amber/archive/refs/tags/%{version}
 BuildRequires:  cargo
 BuildRequires:  rust
 Requires:       bash
+Recommends:     bc
 
 %description
 A language compiled to Bash.
